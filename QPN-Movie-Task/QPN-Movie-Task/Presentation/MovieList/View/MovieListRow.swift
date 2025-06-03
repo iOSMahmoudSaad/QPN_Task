@@ -28,7 +28,7 @@ struct MovieRow: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(movie.title)
                     .font(.headline)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.accentColor)
                 
                 if let releaseDate = movie.releaseDate {
                     Text("\(releaseDate)")
@@ -45,12 +45,14 @@ struct MovieRow: View {
                             .foregroundColor(.gray)
                         
                         HStack(spacing: 2) {
-                            Image(systemName: "star.fill")
-                                .foregroundColor(.yellow)
-                                .font(.caption)
-                            Text("\(movie.voteAverage, specifier: "%.2f")")
+                           Text("Rating : \(movie.voteAverage, specifier: "%.2f")")
                                 .font(.caption)
                                 .foregroundColor(.gray)
+                            
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.accentColor)
+                                .font(.caption)
+
                         }
                     }
                     
@@ -63,7 +65,7 @@ struct MovieRow: View {
         .background(Color.white)
         .overlay(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color.blue, lineWidth: 2)
+                    .stroke(Color.accentColor, lineWidth: 2)
             )
         .cornerRadius(12)
         .padding(.vertical, 4)
