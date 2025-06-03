@@ -23,9 +23,9 @@ final class MovieRepositoryImpl: MovieRepository {
         }
         
         let request = PopularMoviesRequest()
-        let response: Movie = try await networkService.execute(request)
-        cacheMovies([response])
-        return [response]
+        let response: MovieList = try await networkService.execute(request)
+        cacheMovies(response.results)
+        return response.results
     }
     
 
