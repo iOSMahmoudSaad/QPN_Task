@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct QPN_Movie_TaskApp: App {
+    
+    @StateObject private var coordinator = AppCoordinator(container: AppContainer.shared)
+
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoordinatorView(coordinator: coordinator)
+                .environmentObject(coordinator)
         }
     }
 }
