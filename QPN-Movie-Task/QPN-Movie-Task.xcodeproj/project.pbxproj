@@ -29,9 +29,22 @@
 		663F2BDF2DEF4130009D05CF /* QPN-Movie-TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QPN-Movie-TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		663F2D6F2DEF5FE7009D05CF /* Exceptions for "QPN-Movie-Task" folder in "QPN-Movie-Task" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 663F2BC72DEF412E009D05CF /* QPN-Movie-Task */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		663F2BCA2DEF412E009D05CF /* QPN-Movie-Task */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				663F2D6F2DEF5FE7009D05CF /* Exceptions for "QPN-Movie-Task" folder in "QPN-Movie-Task" target */,
+			);
 			path = "QPN-Movie-Task";
 			sourceTree = "<group>";
 		};

@@ -26,7 +26,13 @@ struct MovieListView: View {
                 movieList
             }
         }
-        .navigationTitle("Trending Movie")
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("Trending Movie")
+                    .font(.headline)
+                    .foregroundColor(.accent)
+            }
+        }
         .task {
             await viewModel.loadMovies()
         }

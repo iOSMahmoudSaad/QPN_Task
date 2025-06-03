@@ -36,7 +36,7 @@ final class MovieDetailViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title1)
-        label.textColor = .systemBlue
+        label.textColor = .accent
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -69,7 +69,7 @@ final class MovieDetailViewController: UIViewController {
     private let descriptionTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title2)
-        label.textColor = .systemBlue
+        label.textColor = .accent
         label.text = "Description"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -164,7 +164,7 @@ final class MovieDetailViewController: UIViewController {
         ])
         
         let starAttachment = NSTextAttachment()
-        starAttachment.image = UIImage(systemName: "star.fill")?.withTintColor(.yellow)
+        starAttachment.image = UIImage(systemName: "star.fill")?.withTintColor(.accent)
         let starString = NSAttributedString(attachment: starAttachment)
         let attributedRateText = NSMutableAttributedString(string: "Rate: ")
         attributedRateText.append(NSAttributedString(string: String(format: "%.2f", viewModel.voteAverage)))
