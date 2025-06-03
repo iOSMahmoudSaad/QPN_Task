@@ -7,6 +7,12 @@
 
 import Foundation
 
+
+struct MovieList: Codable {
+    
+   let results: [Movie]
+}
+
 struct Movie: Identifiable, Codable {
     let id: Int
     let title: String
